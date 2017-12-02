@@ -3,7 +3,9 @@ from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.views.generic.edit import FormView
+from django.views.generic.list import ListView
 from braces.views import LoginRequiredMixin
+from courses.models import Course
 from .forms import CourseEnrollForm
 
 
