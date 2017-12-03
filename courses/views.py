@@ -7,6 +7,7 @@ from django.views.generic.detail import DetailView
 from django.forms.models import modelform_factory
 from django.db.models import Count
 from django.apps import apps
+from django.core.cache import cache
 from braces.views import LoginRequiredMixin, PermissionRequiredMixin, CsrfExemptMixin, JsonRequestResponseMixin
 from .forms import ModuleFormSet
 from students.forms import CourseEnrollForm
