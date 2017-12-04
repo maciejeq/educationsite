@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'memcache_status',
     'embed_video',
+    'restframework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -124,3 +125,9 @@ CACHES = {
 CACHE_MIDDLEWARE_ALIAS = 'default'
 CACHE_MIDDLEWARE_SECONDS = 60 * 15
 CACHE_MIDDLEWARE_KEY_PREFIX = 'educationsite'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

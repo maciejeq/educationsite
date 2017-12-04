@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^course/', include('courses.urls')),
     urls(r'^students/', include('students.urls')),
     url(r'^$', CourseListView.as_view(), name='course_list'),
+    url(r'^api/', include('courses.api.urls', namespace='api')),
 ]
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
